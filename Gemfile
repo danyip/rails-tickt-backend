@@ -57,3 +57,6 @@ gem 'rack-cors'
 gem 'knock'
 
 gem 'jwt'
+
+gem 'colorize'
+
