@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   
   def all
     events = Event.all
-    render json: events
+    render json: events, include: {venue: {except: [:updated_at, :created_at]}}
   end
 
   def one
