@@ -80,6 +80,7 @@ GEM
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.5)
+    geocoder (1.7.3)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -210,6 +211,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   colorize
+  geocoder
   jbuilder (~> 2.5)
   jwt
   knock

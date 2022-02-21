@@ -60,3 +60,5 @@ gem 'jwt'
 
 gem 'colorize'
 
+gem 'geocoder'
+
