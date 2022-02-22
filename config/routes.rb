@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get '/events/:id' => 'events#one'
 
-  get '/venues' => 'venues#all'
+  get '/venues/' => 'venues#all'
 
   post 'user_token' => 'user_token#create'
 
