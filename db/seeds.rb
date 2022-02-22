@@ -16,28 +16,28 @@ User.destroy_all
     email: "dan@ga.co",
     password: "chicken",
     user_level: 0,
-    image: "https://res.cloudinary.com/dn3lirqf2/image/upload/v1645172970/cld-sample.jpg"
+    image: "dan"
   )
   u2 = User.create!(
     name: "David",
     email: "dave@ga.co",
     password: "chicken",
     user_level: 0,
-    image: "https://res.cloudinary.com/dn3lirqf2/image/upload/v1645172970/cld-sample.jpg"
+    image: "dave"
   )
   u3 = User.create!(
     name: "Cameron",
     email: "cam@ga.co",
     password: "chicken",
     user_level: 0,
-    image: "https://res.cloudinary.com/dn3lirqf2/image/upload/v1645172970/cld-sample.jpg"
+    image: "cam"
   )
   u4 = User.create!(
     name: "Steven",
     email: "steve@ga.co",
     password: "chicken",
     user_level: 0,
-    image: "https://res.cloudinary.com/dn3lirqf2/image/upload/v1645172970/cld-sample.jpg"
+    image: "steve"
   )
 
   puts "#{User.count} users created".blue
@@ -56,7 +56,7 @@ Venue.destroy_all
     seat_rows: 20,
     seat_columns: 20,
     standing_capacity: 1000,
-    image: 'https://res.cloudinary.com/dn3lirqf2/image/upload/v1645175213/soh_ymhanr.jpg'
+    image: 'soh'
   )
   v2 = Venue.create!(
     name: 'Adelaide Oval',
@@ -66,7 +66,7 @@ Venue.destroy_all
     seat_rows: 25,
     seat_columns: 25,
     standing_capacity: 10_000,
-    image: 'https://res.cloudinary.com/dn3lirqf2/image/upload/v1645175217/Adelaide_city_centre_view_crop_igjdcw.jpg'
+    image: 'adelaide_oval'
   )
   v3 = Venue.create!(
     name: 'Oxford Art Factory',
@@ -76,7 +76,7 @@ Venue.destroy_all
     seat_rows: 15,
     seat_columns: 10,
     standing_capacity: 300,
-    image: 'https://res.cloudinary.com/dn3lirqf2/image/upload/v1645175209/oxford_art_vfjk8u.jpg'
+    image: 'oxford_art'
   )
   v4 = Venue.create!(
     name: 'The Enmore Theatre',
@@ -86,7 +86,7 @@ Venue.destroy_all
     seat_rows: 10,
     seat_columns: 20,
     standing_capacity: 1_600,
-    image: 'https://res.cloudinary.com/dn3lirqf2/image/upload/v1645175194/enmore_uj2kjk.jpg'
+    image: 'enmore'
   )
 
 
@@ -109,7 +109,7 @@ Event.destroy_all
     event_type: 1,
     venue_id: v1.id,
     user_id: u1.id,
-    image: "https://res.cloudinary.com/dn3lirqf2/image/upload/v1645178269/comedy-gfa7a8f2bf_1920_k8eeo8.jpg"  
+    image: "comedy-gfa7a8f2bf_1920_k8eeo8_ymvjlm"  
   )
   e2 = Event.create!(
     name: "AJ Lamarque - English Breakfast",
@@ -123,7 +123,7 @@ Event.destroy_all
     event_type: 0,
     venue_id: v2.id,
     user_id: u2.id,
-    image: "https://res.cloudinary.com/dn3lirqf2/image/upload/v1645178455/concert-g1d2a8bbce_1280_vf4yda.jpg"  
+    image: "concert-g1d2a8bbce_1280_vf4yda_azycf3"  
   )
   e3 = Event.create!(
     name: "The Bear Pack",
@@ -134,7 +134,7 @@ Event.destroy_all
     event_type: 1,
     venue_id: v3.id,
     user_id: u3.id,
-    image: "https://res.cloudinary.com/dn3lirqf2/image/upload/v1645178592/bear-g75e3748e4_1920_e0qbv9.jpg"  
+    image: "bear"  
   )
   e4 = Event.create!(
     name: "Dinosaur Time Machine",
@@ -145,7 +145,7 @@ Event.destroy_all
     event_type: 0,
     venue_id: v4.id,
     user_id: u4.id,
-    image: "https://res.cloudinary.com/dn3lirqf2/image/upload/v1645178718/dinosaur-g3c8ccda39_1920_nrvamj.jpg"  
+    image: "dino"  
   )
 
   puts "#{Event.count} events created".blue
@@ -265,82 +265,82 @@ Comment.destroy_all
   puts
   print "Creating comments ...".red
     c1 = Comment.create!(
-      text: "Yes, this is going to be great!",
+      text: "<p>Yes, this is going to be great!</p>",
       event_id: e1.id,
       user_id: u1.id
     )
     c2 = Comment.create!(
-      text: "I'm soooooo excited!",
+      text: "<p>I'm soooooo excited!</p>",
       event_id: e1.id,
       user_id: u2.id
     )
     c3 = Comment.create!(
-      text: "Can't wait to go.",
+      text: "<p>Can't wait to go.</p>",
       event_id: e1.id,
       user_id: u3.id
     )
     c4 = Comment.create!(
-      text: "Do I need to bring an umbrella to this venue?",
+      text: "<p>Do I need to bring an umbrella to this venue?</p>",
       event_id: e1.id,
       user_id: u4.id
     )
     c5 = Comment.create!(
-      text: "First comment!",
+      text: "<p>First comment!</p>",
       event_id: e2.id,
       user_id: u1.id
     )
     c6 = Comment.create!(
-      text: "Another comment!",
+      text: "<p>Another comment!</p>",
       event_id: e2.id,
       user_id: u2.id
     )
     c7 = Comment.create!(
-      text: "Is this where we comment?.",
+      text: "<p>Is this where we comment?.</p>",
       event_id: e2.id,
       user_id: u3.id
     )
     c8 = Comment.create!(
-      text: "I want to comment too!",
+      text: "<p>I want to comment too!</p>",
       event_id: e2.id,
       user_id: u4.id
     )
     c9 = Comment.create!(
-      text: "Has anyone seen this show before?",
+      text: "<p>Has anyone seen this show before?</p>",
       event_id: e3.id,
       user_id: u1.id
     )
     c10 = Comment.create!(
-      text: "Nah, but im excited...",
+      text: "<p>Nah, but im excited...</p>",
       event_id: e3.id,
       user_id: u2.id
     )
     c11 = Comment.create!(
-      text: "Yes, it's great!",
+      text: "<p>Yes, it's great!</p>",
       event_id: e3.id,
       user_id: u3.id
     )
     c12 = Comment.create!(
-      text: "I'm going for my birthday!",
+      text: "<p>I'm going for my birthday!</p>",
       event_id: e3.id,
       user_id: u4.id
     )
     c13 = Comment.create!(
-      text: "I'm alway the first to comment",
+      text: "<p>I'm alway the first to comment</p>",
       event_id: e4.id,
       user_id: u1.id
     )
     c14 = Comment.create!(
-      text: "Can I park my car at this venue?",
+      text: "<p>Can I park my car at this venue?</p>",
       event_id: e4.id,
       user_id: u2.id
     )
     c15 = Comment.create!(
-      text: "Probably, but it might get broken into",
+      text: "<p>Probably, but it might get broken into</p>",
       event_id: e4.id,
       user_id: u3.id
     )
     c16 = Comment.create!(
-      text: "Does anyone have any other event suggestions?",
+      text: "<p>Does anyone have any other event suggestions?</p>",
       event_id: e4.id,
       user_id: u4.id
     )
