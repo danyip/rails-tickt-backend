@@ -134,7 +134,7 @@ Event.destroy_all
     event_type: 1,
     venue_id: v3.id,
     user_id: u3.id,
-    image: "https://res.cloudinary.com/dn3lirqf2/image/upload/v1645178592/bear-g75e3748e4_1920_e0qbv9.jpg"  
+    image: "bear-g75e3748e4_1920_e0qbv9"  
   )
   e4 = Event.create!(
     name: "Dinosaur Time Machine",
