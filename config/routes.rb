@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create, :edit, :update]
 
+  post '/comments' => 'comments#new'
+
   post '/tickets' => 'tickets#new'
 
   get '/events' => 'events#all'
