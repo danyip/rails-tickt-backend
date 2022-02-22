@@ -61,8 +61,8 @@ Venue.destroy_all
   v2 = Venue.create!(
     name: 'Adelaide Oval',
     address: 'War Memorial Dr, North Adelaide SA 5006',
-    latitude: -34.915516,
-    longitude: 138.596115,
+    latitude: -34.915340,
+    longitude: 138.596136,    
     seat_rows: 25,
     seat_columns: 25,
     standing_capacity: 10_000,
