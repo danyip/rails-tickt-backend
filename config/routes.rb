@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/events' => 'events#all'
 
+  get '/search' => 'events#search'
+
   get '/events/:id' => 'events#one'
 
   get '/venues/' => 'venues#all'
