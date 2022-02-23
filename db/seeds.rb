@@ -88,6 +88,26 @@ Venue.destroy_all
     standing_capacity: 1_600,
     image: 'enmore'
   )
+  v5= Venue.create!(
+    name: 'The Cutaway',
+    address: '1 Merriman St, Barangaroo NSW 2000',
+    latitude: -33.858143263907195,
+    longitude: 151.2017762534623,
+    seat_rows: 10,
+    seat_columns: 20,
+    standing_capacity: 1_600,
+    image: 'baranagroo'
+  )
+  v6= Venue.create!(
+    name: 'The Star Event Centre',
+    address: '80 Pyrmont St, Pyrmont NSW 2009',
+    latitude: -33.86691468900574, 
+    longitude: 151.1943238693165,
+    seat_rows: 10,
+    seat_columns: 20,
+    standing_capacity: 1_600,
+    image: 'star'
+  )
 
 
   puts "#{Venue.count} venues created".blue
@@ -146,6 +166,28 @@ Event.destroy_all
     venue_id: v4.id,
     user_id: u4.id,
     image: "dino"  
+  )
+  e5 = Event.create!(
+    name: "Yoga at Pocket City Farms",
+    description: "Though Sydney is filled with some awesome yoga studios, there are very few chances for city slickin' yogis to breathe in fresh air while trying out their best crane pose. Pocket City Farms is connecting mind and body to the actual earth with outdoor yoga classes that overlook their urban farm.",
+    date: "2023/5/13",
+    time: "02:30:00",
+    price: 10_00,
+    event_type: 0,
+    venue_id: v5.id,
+    user_id: u4.id,
+    image: "yoga"  
+  )
+  e6 = Event.create!(
+    name: "Chocolate Starfish - Bat Out Of Hell",
+    description: "By popular demand, Chocolate Starfish are gearing up to celebrate one of the most iconic albums of all time. It might have been more than half a decade since Chocolate Starfish toured a select run of shows on their Bat Out Of Hell In Concert tour, but they are still receiving regular requests from fans on when they will do it again. The vibrant band are gearing up to celebrate one of the most iconic albums of all time in a tour that will also include a swag of additional Jim Steinman hits on the setlist.",
+    date: "2023/5/13",
+    time: "08:30:00",
+    price: 10_00,
+    event_type: 0,
+    venue_id: v6.id,
+    user_id: u1.id,
+    image: "65263730_10157344294351550_5845978732178702336_o-1200x520_kyitiy"  
   )
 
   puts "#{Event.count} events created".blue
