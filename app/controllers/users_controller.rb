@@ -17,6 +17,16 @@ class UsersController < ApplicationController
 
   end
 
+  def tickets
+    events = Event.joins(:users).where(users: {id: current_user.id}).uniq
+    
+    # TODO: Find out the correct syntax for this!!!
+    # render json: events, include: {tickets: {where: {user_id: current}}}
+    
+    render json: events, include: :tickets
+
+  end
+
   def edit
     
   end
