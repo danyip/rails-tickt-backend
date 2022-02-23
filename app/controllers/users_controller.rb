@@ -18,9 +18,12 @@ class UsersController < ApplicationController
   end
 
   def tickets
-    events = current_user.events.uniq
-
-    render json: current_user.tickets.group_by { |ticket| ticket.event.name }, include: :event
+    
+    render json: current_user.tickets.group_by { |ticket| ticket.event.name }, include: [
+      {event: {except: [:image, :description, :updated_at, :created_at]}},
+      {venue: {except: [:seat_rows, :seat_columns, :standing_capacity, :image, :updated_at, :created_at, :longitude, :latitude]}},
+      {user: {only: [:name]}}
+    ]
 
   end
 
