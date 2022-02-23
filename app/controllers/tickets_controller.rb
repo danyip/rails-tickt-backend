@@ -3,7 +3,11 @@ class TicketsController < ApplicationController
   def new
     tickets = Ticket.create! ticket_params
     
-    render json: tickets # TODO: figure out how to catch errors with nested creates!
+    render json: tickets, include: [
+                                  {event: {except: [:image, :description, :updated_at, :created_at]}},
+                                  {venue: {except: [:seat_rows, :seat_columns, :standing_capacity, :image, :updated_at, :created_at, :longitude, :latitude]}},
+                                  {user: {only: [:name]}}
+                                ]
   end
 
   private
