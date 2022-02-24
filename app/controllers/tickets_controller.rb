@@ -1,7 +1,8 @@
 class TicketsController < ApplicationController
-  # before_action :authenticate_user
+  before_action :authenticate_user
 
   def new
+
     tickets = Ticket.create! ticket_params
     
     render json: tickets, include: [
@@ -15,7 +16,7 @@ class TicketsController < ApplicationController
 
   def ticket_params
     params.require(:_json).map do |param|
-      param.permit(:user_id, :event_id, :seat_row, :seat_column)
+      param.permit(:event_id, :seat_row, :seat_column).merge(user_id: current_user.id )
     end
   end
 
