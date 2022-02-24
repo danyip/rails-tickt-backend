@@ -108,6 +108,66 @@ Venue.destroy_all
     standing_capacity: 1_600,
     image: 'star'
   )
+  v7= Venue.create!(
+    name: 'The Hordern Pavilion',
+    address: '1 Driver Ave, Moore Park NSW 2021',
+    latitude: -33.893920866826996,  
+    longitude: 151.2242544841408,
+    seat_rows: 10,
+    seat_columns: 20,
+    standing_capacity: 8_000,
+    image: 'Horden-Pavillion'
+  )
+  v8= Venue.create!(
+    name: 'Newcastle Entertainment Centre',
+    address: 'Showground, Brown Rd, Broadmeadow NSW 2292',
+    latitude: -32.920448886992645,   
+    longitude: 151.73702746082373,
+    seat_rows: 10,
+    seat_columns: 20,
+    standing_capacity: 4_000,
+    image: 'newcastle'
+  )
+  v9= Venue.create!(
+    name: 'Stadium Australia',
+    address: 'Edwin Flack Ave, Sydney Olympic Park NSW 2127',
+    latitude: -33.84697205944647,   
+    longitude: 151.06341699433125,
+    seat_rows: 10,
+    seat_columns: 20,
+    standing_capacity: 45_000,
+    image: 'stadium_australia'
+  )
+  v10= Venue.create!(
+    name: 'Qudos Bank Arena',
+    address: '19 Edwin Flack Ave, Sydney Olympic Park NSW 2127',
+    latitude: -33.844166317378736,   
+    longitude: 151.06214291297493,
+    seat_rows: 10,
+    seat_columns: 20,
+    standing_capacity: 28_000,
+    image: 'qudos'
+  )
+  v11= Venue.create!(
+    name: 'Adelaide Entertainment Centre',
+    address: '98 Port Rd, Hindmarsh SA 5007',
+    latitude: -34.90778301648986,   
+    longitude: 138.573736026497,
+    seat_rows: 10,
+    seat_columns: 20,
+    standing_capacity: 12_000,
+    image: 'adelaide_entertainment'
+  )
+  v12= Venue.create!(
+    name: 'Newcastle Civic Theatre',
+    address: '375 Hunter St, Newcastle NSW 2300',
+    latitude: -32.926881240561,   
+    longitude: 151.77232807486033,
+    seat_rows: 10,
+    seat_columns: 20,
+    standing_capacity: 200,
+    image: 'newcastle_civic'
+  )
 
 
   puts "#{Venue.count} venues created".blue
@@ -133,8 +193,8 @@ Event.destroy_all
   )
   e2 = Event.create!(
     name: "AJ Lamarque - English Breakfast",
-    description: "The kettle’s just boiled, fancy a cuppa?
-    We’ve all been there. The water’s just boiled. Everyone is eagerly waiting. And in that moment you’re left asking yourself, do I have what it takes to make the perfect cup of tea?
+    description: "The kettle's just boiled, fancy a cuppa?
+    We've all been there. The water's just boiled. Everyone is eagerly waiting. And in that moment you're left asking yourself, do I have what it takes to make the perfect cup of tea?
     When nothing seems to be going right, a heart warming brew can make the world of difference.
     Join the self-declared Mixed Raced Queen as he pours a soothing brew for those turbulent times and breaks down what it acrually takes to make the best Cuppa.",
     date: "2022/4/22",
@@ -147,7 +207,7 @@ Event.destroy_all
   )
   e3 = Event.create!(
     name: "The Bear Pack",
-    description: "After a sold out run at Sydney Comedy Festival 2021, The Bear Pack is back! Join improv duo Steen Raskopoulos and Carlo Ritchie accompanies by Anger Lavoipierre on the cello for 60 minutes of improvised storytelling inspired by the audience’s suggestions. The audience have no idea what thrilling and hillarious twisted tale they’re in for, but are guaranteed to be left in awe of the quick-witted and creative minds of these improvised comedy masterminds.",
+    description: "After a sold out run at Sydney Comedy Festival 2021, The Bear Pack is back! Join improv duo Steen Raskopoulos and Carlo Ritchie accompanies by Anger Lavoipierre on the cello for 60 minutes of improvised storytelling inspired by the audience's suggestions. The audience have no idea what thrilling and hillarious twisted tale they're in for, but are guaranteed to be left in awe of the quick-witted and creative minds of these improvised comedy masterminds.",
     date: "2022/4/22",
     time: "09:30:00",
     price: 80_00,
@@ -188,6 +248,125 @@ Event.destroy_all
     venue_id: v6.id,
     user_id: u1.id,
     image: "65263730_10157344294351550_5845978732178702336_o-1200x520_kyitiy"  
+  )
+  e7 = Event.create!(
+    name: "Duke Dumont (LIVE)",
+    description: "Duke Dumont played a pivotal role in making UK deep house the thundering global juggernaut it is today, dropping #1 hits across the last decade like 'Need U (100%)', 'I Got U' and 'Ocean Drive', whilst pumping out tracks that permeated underground club scenes.
+    With an untouchable back catalogue of originals and latest album, Duality, under his belt, Duke Dumont's Sideshows are sure to be an addictive mix of sonic exploration. Get ready!",
+    date: "2022/7/15",
+    time: "09:30:00",
+    price: 90_00,
+    event_type: 1,
+    venue_id: v7.id,
+    user_id: u1.id,
+    image: "duke_dumont"  
+  )
+  e8 = Event.create!(
+    name: "Steel Panther",
+    description: "The October 'HEAVEY METAL RULES TOUR' tour marks the largest venues that Steel Panther will have played in Australia due to growing demand every time they return down under! Joined by Sevendust for shows in Melbourne, Newcastle and Sydney, before finishing for the final blow-out mini-fest at Eaton's Hill Hotel, Brisbane.",
+    date: "2022/10/22",
+    time: "08:30:00",
+    price: 100_00,
+    event_type: 1,
+    venue_id: v7.id,
+    user_id: u1.id,
+    image: "steelpanther"  
+  )
+  e9 = Event.create!(
+    name: "Guns N' Roses",
+    description: "What was to be the biggest stadium rock tour of 2021 is moving to Summer 2022!
+    Axl, Slash and Duff have told fans..'Australia, we can't wait to see you bigger and better next Summer!'
+    This will be the biggest stadium rock tour of Summer 2022 with hundreds of people on the road, a massive production and logistics involved.",
+    date: "2023/5/13",
+    time: "08:30:00",
+    price: 110_00,
+    event_type: 1,
+    venue_id: v9.id,
+    user_id: u1.id,
+    image: "gunsnroses"  
+  )
+  e10 = Event.create!(
+    name: "The Strokes",
+    description: "Secret Sounds is thrilled to announce that NY rock icons, The Strokes will play sideshows in Melbourne and Sydney, their first Australian headline dates for a decade, when they head to Australia for Splendour in the Grass in July 2022. Accompanied by The Chats and The Lazy Eyes, punters are in for one helluva show.
+    Armed with songs from their 20 year, six-album catalogue, The Strokes live set will also feature tracks from their 2021 Grammy Award winning Best Rock Album The New Abnormal.",
+    date: "2022/7/26",
+    time: "08:30:00",
+    price: 90_00,
+    event_type: 1,
+    venue_id: v7.id,
+    user_id: u1.id,
+    image: "strokes"  
+  )
+  e11 = Event.create!(
+    name: "Tame Impala",
+    description: "In October 2022, legendary psych-rock phenomenon TAME IMPALA embark on their biggest ever tour of Australia.
+    Led by multi-instrumentalist Kevin Parker, Tame Impala have established themselves as one of the most astounding live acts around. A meditative, light-infused party of psychedelic euphoria, their live experience is world renowned - impressing at prestigious headlining slots such as Coachella, Glastonbury, Primavera, and Splendour in the Grass.",
+    date: "2022/10/18",
+    time: "07:00:00",
+    price: 80_00,
+    event_type: 1,
+    venue_id: v10.id,
+    user_id: u1.id,
+    image: "tameimpala"  
+  )
+  e12 = Event.create!(
+    name: "Dr Michael Mosley - A Life Changing Experience",
+    description: "Dr Michael Mosley's expertise in weight loss, sleep, wellness, and explaining how the human body works, has had a profound, life-changing, effect on many people.
+    In his brand-new live theatre show Dr Michael Mosley, using powerful and entertaining visuals, reveals the latest, surprising science around weight loss, sleep, mental health, and how to achieve extraordinary leaps of performance.
+    Join Michael Mosley as he takes you, live-on-stage, on a journey of that most miraculous, complex, and sometimes beautiful organism that is your body.",
+    date: "2022/5/5",
+    time: "05:00:00",
+    price: 30_00,
+    event_type: 0,
+    venue_id: v12.id,
+    user_id: u1.id,
+    image: "mosley"  
+  )
+  e13 = Event.create!(
+    name: "Keith Urban tickets - The Speed Of Now World Tour 2022",
+    description: "Five-time ARIA and four-time GRAMMY Award winner Keith Urban returns home to Australia for his 'THE SPEED OF NOW WORLD TOUR 2022', presented by Youi. It marks Urban's first concerts in Australia in more than two years and will be the first chance that fans will have to see him perform songs from his #1 tenth studio album.
+    Urban is always pushing forward with insatiable creative hunger. During 'THE SPEED OF NOW WORLD TOUR 2022' Urban will deliver a set filled with his best-known hits including 'One Too Many', 'The Fighter', 'Wasted Time', 'Blue Ain't Your Colour', 'Long Hot Summer', and songs from his #1 album, THE SPEED OF NOW Part 1' and never-before-seen state of the art production.",
+    date: "2022/12/12",
+    time: "08:30:00",
+    price: 180_00,
+    event_type: 1,
+    venue_id: v8.id,
+    user_id: u1.id,
+    image: "kieth"  
+  )
+  e14 = Event.create!(
+    name: "Jim Jefferies",
+    description: "Jim Jefferies, Australia's most famous expat rock star comedian, political commentator, TV show anchor and writer, is returning to Australia for the first time in three years this coming June and July.
+    Fans are in for a treat as Jefferies, one of the highest-selling stand-up comedians on the planet, brings his hilarious routines to intimate theatre stages. His previous arena tour of Australia sold over 56,000 tickets; don't miss this chance to get up close and personal!",
+    date: "2022/6/20",
+    time: "08:30:00",
+    price: 90_00,
+    event_type: 0,
+    venue_id: v4.id,
+    user_id: u1.id,
+    image: "jim"  
+  )
+  e15 = Event.create!(
+    name: "Midnight Oil - 'RESIST' : The Final Tour ",
+    description: "Nearly five years ago the legendary Midnight Oil returned with a sweat drenched pub gig at Selinas where frontman Peter Garrett exhorted 'rage, rage, against the dying of the light'. And that's exactly what they've done ever since. This latest chapter of their iconic career will close with the release of a new album and a series of big gigs. Both are aptly titled Resist.",
+    date: "2022/3/30",
+    time: "08:30:00",
+    price: 70_00,
+    event_type: 1,
+    venue_id: v11.id,
+    user_id: u1.id,
+    image: "midnightoil"  
+  )
+  e16 = Event.create!(
+    name: "The Umbilical Brothers - The Distraction",
+    description: "They haven't just broken the rules of theatre; they've invented a new theatrical multiverse. Unbelievable human performance meets special-effects wizardry as the world's favourite Australian comedy duo perform simultaneously on stage and on the big screen. It feels so much like magic, you'll swear it was sorcery.",
+    date: "2023/5/13",
+    time: "08:30:00",
+    price: 65_00,
+    event_type: 0,
+    venue_id: v1.id,
+    user_id: u1.id,
+    image: "umbillical"  
   )
 
   puts "#{Event.count} events created".blue
